@@ -5,7 +5,7 @@ import twilio from "twilio";
 import dotenv from "dotenv";
 dotenv.config();
 
-const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+const client = twilio(process.env.TWILIO_ACCOUNT_SID || 'ACdeb43810de2ebda6429aa11c62cbfaba', process.env.TWILIO_AUTH_TOKEN || '1bca3d4d44d805aff4616af65f45c2cd');
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',          // o smtp.zoho.com, smtp-mail.outlook.com, etc.
