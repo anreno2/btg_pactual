@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: react_vite_app
+    ports:
+      - "80:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - PORT=3000
