@@ -5,7 +5,7 @@ import twilio from "twilio";
 import dotenv from "dotenv";
 dotenv.config();
 
-const client = twilio('ACdeb43810de2ebda6429aa11c62cbfaba', '3afd70abf212f1b8b7c5bb88a7a8733a');
+const client = twilio('AC4e35fdddd396d7057f2932471495115a', '717a3d5a1372ad15bd8dc8d41316a02a');
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',          // o smtp.zoho.com, smtp-mail.outlook.com, etc.
@@ -45,7 +45,7 @@ const sendNotificationEmailSms = async (notification, user, fundName, amount) =>
     try {
       client.messages.create({
         body: `Hola, Su Fondo de inversión ${fundName} fue abierto con éxito. Valor: $${amount.toLocaleString()}`,
-        from: "+15705769092",
+        from: "+19716261820",
         to: `+57${user.cel}`,
       });
 
