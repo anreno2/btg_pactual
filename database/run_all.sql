@@ -1,0 +1,12 @@
+\i 001_create_database.sql
+\i 002_create_schema.sql
+\i 003_tables/001_clientes.sql
+\i 003_tables/002_sucursales.sql
+\i 003_tables/003_productos.sql
+\i 003_tables/004_sucursal_productos.sql
+\i 003_tables/005_visitas.sql
+\i 003_tables/006_cliente_productos.sql
+\i 004_constraints/foreign_keys.sql
+\i 005_indexes/indexes.sql
+\i 006_seed/initial_data.sql
+\i 007_queries/consultas.sql
